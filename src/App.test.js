@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("should initialize app state correctly", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  const textbox = screen.getByRole('textbox', { name: /search/i });
+  expect(textbox).toHaveValue(''); 
+
+  const pokemonData = screen.queryByTestId('pokemon-data');
+  expect(pokemonData).toBeNull();
 });

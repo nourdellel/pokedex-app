@@ -1,0 +1,218 @@
+.pokedex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 100px 20px 20px 20px;
+  min-height: 100vh;
+}
+
+.pokedex-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #4F4F4F;
+  margin-bottom: 30px;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 80px;
+  width: 100%;
+  justify-items: center;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .pokemon-card {
+    width: 90%;
+  }
+}
+
+.pokemon-image-pokedex {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.pokemon-image-pokedex:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+.pokemon-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #4F4F4F;
+}
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.type-badge {
+  font-size: 0.875rem;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+  background-color: #6b6b6b;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.type-badge.normal {
+  background-color: #A8A87B;
+}
+
+.type-badge.water {
+  background-color: #559EDF;
+}
+
+.type-badge.fire {
+  background-color: #EE803B;
+}
+
+.type-badge.grass {
+  background-color: #5DBE62;
+}
+
+.type-badge.electric {
+  background-color: #F7CF43;
+}
+
+.type-badge.ice {
+  background-color: #9AD8D8;
+}
+
+.type-badge.fighting {
+  background-color: #BE322E;
+}
+
+.type-badge.poison {
+  background-color: #a040a0;
+}
+
+.type-badge.ground {
+  background-color: #DFBF6E;
+}
+
+.type-badge.flying {
+  background-color: #A893ED;
+}
+
+.type-badge.psychic {
+  background-color: #EC5C89;
+}
+
+.type-badge.bug {
+  background-color: #A8B732;
+}
+
+.type-badge.rock {
+  background-color: #B89F41;
+}
+
+.type-badge.ghost {
+  background-color: #705A97;
+}
+
+.type-badge.dark {
+  background-color: #705849;
+}
+
+.type-badge.dragon {
+  background-color: #7043F4;
+}
+
+.type-badge.steel {
+  background-color: #B8B9CF;
+}
+
+.type-badge.fairy {
+  background-color: #EFB7BD;
+}
+
+.load-more {
+  padding: 10px 20px;
+  background-color: #3f8c97;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 80px;
+}
+
+.load-more:hover {
+  background-color: #2d7367;
+}
+
+.loading {
+  font-size: 5rem;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .loading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading {
+    font-size: 2rem;
+  }
+}
+
+.pokedex-back-btn {
+  background-image: url("data:image/svg+xml,%3Csvg width='39' height='67' viewBox='0 0 39 67' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7693 33.5L37.5721 8.16973C39.476 6.30079 39.476 3.27064 37.5721 1.4017C35.6683 -0.467235 32.5817 -0.467235 30.6779 1.4017L1.42785 30.116C-0.475952 31.9849 -0.475952 35.0151 1.42785 36.884L30.6779 65.5983C32.5817 67.4672 35.6683 67.4672 37.5721 65.5983C39.476 63.7294 39.476 60.6992 37.5721 58.8303L11.7693 33.5Z' fill='%234E4B51'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 39px;
+  height: 67px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+}
+
+.pokedex-back-btn:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='39' height='67' viewBox='0 0 39 67' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7693 33.5L37.5721 8.16973C39.476 6.30079 39.476 3.27064 37.5721 1.4017C35.6683 -0.467235 32.5817 -0.467235 30.6779 1.4017L1.42785 30.116C-0.475952 31.9849 -0.475952 35.0151 1.42785 36.884L30.6779 65.5983C32.5817 67.4672 35.6683 67.4672 37.5721 65.5983C39.476 63.7294 39.476 60.6992 37.5721 58.8303L11.7693 33.5Z' fill='%237f7c82'/%3E%3C/svg%3E%0A");
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
